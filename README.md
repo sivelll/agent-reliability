@@ -26,3 +26,9 @@ updates. No runnable release is included in this repository.
 
 ## Contact
 For product inquiries, use the contact channel associated with the store purchase.
+
+## Offline MVP
+Python 3.13 deterministic harness validates single-owner lease claiming, stale-lease recovery and duplicate-completion prevention without network or model calls.
+
+    PYTHONPATH=src python3.13 -m unittest discover -s tests -v
+    PYTHONPATH=src python3.13 -m agent_reliability --output /tmp/reliability-report.json
