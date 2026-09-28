@@ -4,7 +4,7 @@ Reliability testing for autonomous AI-agent workers and workflows.
 
 Agent Reliability helps developers validate failure recovery, duplicate-execution prevention, worker lease ownership, provider failover, and durable task completion before unattended agents are trusted in production.
 
-## Planned testing scope (not implemented in this repository)
+## MVP testing scope
 - Single-owner execution and duplicate prevention
 - Worker crash and stale-lease recovery
 - Provider quota / 429 failover scenarios
@@ -12,13 +12,7 @@ Agent Reliability helps developers validate failure recovery, duplicate-executio
 - Machine-readable reliability reports
 
 ## Product status
-This repository currently contains public product information only. It does not
-contain an executable MVP, a test suite, or software releases. The capabilities
-above describe the intended product, not verified behavior.
-
-Offline/safe MVP acceptance is **BLOCKED** until the implementation and its test
-instructions are available. See [STATUS.md](STATUS.md) for the current evidence,
-safety boundaries, and acceptance requirements.
+Offline/safe MVP is implemented and independently re-verified on J3160 on 2026-09-28: 2 unittest cases passed and the CLI emitted a machine-readable PASS report. Scope is limited to deterministic single-owner claim, stale-lease recovery, duplicate-completion prevention, and JSON reporting. It does not control Manager services or external providers. See [STATUS.md](STATUS.md).
 
 ## Delivery
 The intended delivery format is digital software releases, documentation, and
