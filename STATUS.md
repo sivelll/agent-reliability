@@ -48,5 +48,5 @@ failure cases. Missing external accounts or devices must remain explicitly
    `ssh -F /dev/null -o BatchMode=yes` bypass reaches GitHub when network access
    is available, but GitHub returns `Permission denied (publickey)`.
 
-Remote publication and readback are **BLOCKED** until authentication succeeds.
+Remote publication and readback are now verified; the remaining BLOCKED condition is the absence of an application implementation and test suite.
 Do not merge into or push `main` as part of this acceptance work.
